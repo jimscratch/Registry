@@ -1,0 +1,101 @@
+Windows Registry Editor Version 5.00
+
+; Simple System Tweaker
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"LargeSystemCache"=dword:00000001
+"SessionPoolSize"=dword:00000020
+"WriteWatch"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"verbosestatus"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Compress old files]
+@=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"MemCheckBoxInRunDlg"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
+"AutoReboot"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WaitToKillAppTimeout"="4000"
+"AutoEndTasks"="1"
+"DragFullWindows"="0"
+"UserPreferencesMask"=hex(3):90,12,01,80,10,00,00,00
+"SmoothScroll"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control]
+"WaitToKillServiceTimeout"="2000"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WOW]
+"DefaultSeparateVDM"="Yes"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction]
+"Enable"="Y"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"DesktopProcess"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"SeparateProcess"=dword:00000001
+"ListviewWatermark"=dword:00000000
+"TaskbarAnimations"=dword:00000000
+"ListviewAlphaSelect"=dword:00000000
+"WebView"=dword:00000000
+"ListviewShadow"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"NtfsMftZoneReservation"=dword:00000004
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell]
+"BagMRU Size"=dword:00004e20
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\open]
+@="Edit With Notepad"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\open\command]
+@="notepad.exe %1"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoResolveTrack"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+"MaxCacheTtl"=dword:00003600
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpMaxDataRetransmissions"=dword:00000010
+"KeepAliveTime"=dword:00030000
+"KeepAliveInterval"=dword:00001000
+"Tcp1323Opts"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+"KeepAliveEnable"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mrxsmb\Parameters]
+"oplocksdisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Network\Connections\StatMon]
+"ShowLanErrors"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+"SMB2"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+"VisualFXSetting"=dword:00000003
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"CompositionPolicy"=dword:00000001
+"EnableAeroPeek"=dword:00000000
+"ColorizationOpaqueBlend"=dword:00000001
+"ColorizationGlassAttribute"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ThemeManager]
+"ThemeActive"="0"

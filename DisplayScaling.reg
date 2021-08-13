@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; Display scaling
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"Win8DpiScaling"=dword:00000001
+"DpiScalingVer"=dword:00001018
+"DesktopDPIOverride"="-2"
+"LogPixels"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"AppliedDPI"=dword:00000096
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files(x86)\\Microsoft\\Edge\\Application\\msedge.exe"="~ DPIUNAWARE"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files(x86)\\Microsoft\\Edge\\Application\\msedge.exe"="~ DPIUNAWARE"
