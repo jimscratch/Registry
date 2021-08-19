@@ -1,0 +1,277 @@
+Windows Registry Editor Version 5.00
+
+; Tenforums
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth]
+"Icon"="bthudtask.exe"
+"MUIVerb"="Bluetooth"
+"Position"="Middle"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\01menu]
+"MUIVerb"="Bluetooth Devices (classic)"
+"Icon"=""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\01menu\command]
+@="explorer shell:::{28803F59-3A75-4058-995F-4EE5503B023C}"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\02menu]
+"MUIVerb"="Bluetooth Devices"
+"Icon"=""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\02menu\command]
+@="explorer ms-settings:bluetooth"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\03menu]
+"MUIVerb"="Bluetooth File Transfer"
+"Icon"=""
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\03menu\command]
+@="fsquirt.exe"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\04menu]
+"MUIVerb"="Options in Bluetooth Settings"
+"Icon"=""
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\04menu\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,1"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\05menu]
+"MUIVerb"="COM Ports in Bluetooth Settings"
+"Icon"=""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\05menu\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,2"
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\06menu]
+"MUIVerb"="Hardware in Bluetooth Settings"
+"Icon"=""
+
+[HKEY_CLASSES_ROOT\DesktopBackground\Shell\Bluetooth\shell\06menu\command]
+@="rundll32.exe shell32.dll,Control_RunDLL bthprops.cpl,,3"
+
+; For files
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner]
+"MUIVerb"="Change Owner"
+"Extended"=-
+"HasLUAShield"=""
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\01Owner]
+@="See Current Owner"
+"Icon"="imageres.dll,-1029"
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\01Owner\command]
+@="powershell -NoExit Get-ACL '%1'| Format-List -Property Owner"
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\Administrators]
+@="Change Owner to Administrators"
+"HasLUAShield"=""
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\Administrators\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Administrators\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Administrators\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\Everyone]
+@="Change Owner to Everyone"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\Everyone\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Everyone\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Everyone\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\SYSTEM]
+@="Change Owner to SYSTEM"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\SYSTEM\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"SYSTEM\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"SYSTEM\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\TrustedInstaller]
+@="Change Owner to TrustedInstaller"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\*\shell\ChangeOwner\shell\TrustedInstaller\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /t /c /l' -Verb runAs\""
+
+; For folders
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner]
+"MUIVerb"="Change Owner"
+"AppliesTo"="NOT (System.ItemPathDisplay:=\"C:\\Users\" OR System.ItemPathDisplay:=\"C:\\ProgramData\" OR System.ItemPathDisplay:=\"C:\\Windows\" OR System.ItemPathDisplay:=\"C:\\Windows\\System32\" OR System.ItemPathDisplay:=\"C:\\Program Files\" OR System.ItemPathDisplay:=\"C:\\Program Files (x86)\")"
+"Extended"=-
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="middle"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\01Owner]
+@="See Current Owner"
+"Icon"="imageres.dll,-1029"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\01Owner\command]
+@="powershell -NoExit Get-ACL '%1'| Format-List -Property Owner"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\Administrators]
+@="Change Owner to Administrators"
+"HasLUAShield"=""
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\Administrators\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Administrators\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Administrators\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\Everyone]
+@="Change Owner to Everyone"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\Everyone\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Everyone\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"Everyone\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\SYSTEM]
+@="Change Owner to SYSTEM"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\SYSTEM\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"SYSTEM\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"SYSTEM\" /t /c /l' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\TrustedInstaller]
+@="Change Owner to TrustedInstaller"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\ChangeOwner\shell\TrustedInstaller\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /t /c /l' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \\\"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /t /c /l' -Verb runAs\""
+
+; For drives
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner]
+"MUIVerb"="Change Owner"
+"AppliesTo"="NOT (System.ItemPathDisplay:=\"C:\\\")"
+"Extended"=-
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+"Position"="middle"
+"SubCommands"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\01Owner]
+@="See Current Owner"
+"Icon"="imageres.dll,-1029"
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\01Owner\command]
+@="powershell -NoExit Get-ACL '%1'| Format-List -Property Owner"
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\Administrators]
+@="Change Owner to Administrators"
+"HasLUAShield"=""
+"CommandFlags"=dword:00000020
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\Administrators\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"Administrators\" /c' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"Administrators\" /c' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\Everyone]
+@="Change Owner to Everyone"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\Everyone\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/k icacls \"%1\\\" /setowner \"Everyone\" /c' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/k icacls \"%1\\\" /setowner \"Everyone\" /c' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\SYSTEM]
+@="Change Owner to SYSTEM"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\SYSTEM\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"SYSTEM\" /c' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"SYSTEM\" /c' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\TrustedInstaller]
+@="Change Owner to TrustedInstaller"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Drive\shell\ChangeOwner\shell\TrustedInstaller\command]
+@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /c' -Verb runAs\""
+"IsolatedCommand"="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/c icacls \"%1\\\" /setowner \"\"\"NT Service\\TrustedInstaller\"\"\" /c' -Verb runAs\""
+
+[HKEY_CLASSES_ROOT\Drive\shell\Windows.CleanUp]
+"CommandStateSync"=""
+"ExplorerCommandHandler"="{9cca66bb-9c78-4e59-a76f-a5e9990b8aa0}"
+"Icon"="%SystemRoot%\\System32\\cleanmgr.exe,-104"
+"ImpliedSelectionModel"=dword:00000001
+
+[HKEY_CLASSES_ROOT\CLSID\{106ee807-9e5d-451b-a9c5-74908630cefb}]
+@="Color and Appearance"
+"InfoTip"="Change the color of your taskbar, window borders, and Start menu"
+"System.ApplicationName"="Microsoft.Personalization"
+"System.ControlPanel.Category"=dword:00000001
+"System.Software.TasksFileUrl"="Internal"
+
+[HKEY_CLASSES_ROOT\CLSID\{106ee807-9e5d-451b-a9c5-74908630cefb}\DefaultIcon]
+@="%SystemRoot%\\System32\\imageres.dll,-197"
+
+[HKEY_CLASSES_ROOT\CLSID\{106ee807-9e5d-451b-a9c5-74908630cefb}\Shell\Open\command]
+@="explorer shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft.Personalization\\pageColorization"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{106ee807-9e5d-451b-a9c5-74908630cefb}]
+@="Color and Appearance"
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\History\Colors]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"PublishUserActivities"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Windows\System]
+"PublishUserActivities"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"JPEGImportQuality"=dword:00000064
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableFirstLogonAnimation"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableFirstLogonAnimation"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"EnableFirstLogonAnimation"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"EnableFirstLogonAnimation"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"BuiltInDnsClientEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Edge]
+"BuiltInDnsClientEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\EarlyLaunch]
+"DriverLoadPolicy"=dword:00000008
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"UseOLEDTaskbarTransparency"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"UseOLEDTaskbarTransparency"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+"ForceEffectMode"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\Dwm]
+"ForceEffectMode"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Bluetooth]
+"QuickPair"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"HwSchMode"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy]
+"01"=dword:00000001
+"1024"=dword:00000001
+"2048"=dword:00000001

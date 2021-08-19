@@ -1,0 +1,53 @@
+Windows Registry Editor Version 5.00
+
+; Kodi
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\MediaResources\DirectSound\Speaker Configuration]
+"Speaker Configuration"=dword:00000004
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\Calibration\0]
+"GUID"=hex(3):00,0C,96,42,52,36,EB,11,80,01,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_0C45&PID_7603\Calibration\0]
+"GUID"=hex(3):00,0C,96,42,52,36,EB,11,80,02,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\DeviceInstances]
+"7&3203EA63&0&0001"=hex(3):02
+"7&3203EA63&0&0002"=hex(3):02
+"7&3203EA63&0&0003"=hex(3):02
+"7&3203EA63&0&0004"=hex(3):02
+"7&3203EA63&0&0005"=hex(3):02
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\Calibration\1]
+"GUID"=hex(3):70,1D,97,42,52,36,EB,11,80,03,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\Calibration\2]
+"GUID"=hex(3):90,6B,97,42,52,36,EB,11,80,04,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\Calibration\3]
+"GUID"=hex(3):A0,92,97,42,52,36,EB,11,80,05,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_258A&PID_0017\Calibration\4]
+"GUID"=hex(3):B0,B9,97,42,52,36,EB,11,80,06,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_0C45&PID_7603\DeviceInstances]
+"7&2F510A94&0&0000"=hex(3):02
+"7&2F510A94&0&0001"=hex(3):02
+"7&2F510A94&0&0002"=hex(3):02
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_0C45&PID_7603\Calibration\1]
+"GUID"=hex(3):D0,07,98,42,52,36,EB,11,80,07,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\System\CurrentControlSet\Control\MediaProperties\PrivateProperties\DirectInput\VID_0C45&PID_7603\Calibration\2]
+"GUID"=hex(3):E0,2E,98,42,52,36,EB,11,80,08,44,45,53,54,00,00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectInput\KODI.EXE5F93544302773400]
+"Name"="KODI.EXE"
+"UsesMapper"=hex(3):00,00,00,00
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectInput\MostRecentApplication]
+"Name"="KODI.EXE"
+"Id"="KODI.EXE5F93544302773400"
+"Version"=hex(3):00,08,00,00
+"MostRecentStart"=hex(3):33,D4,29,A3,56,CA,D6,01
+
